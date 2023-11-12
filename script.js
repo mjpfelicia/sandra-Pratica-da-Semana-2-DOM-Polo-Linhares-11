@@ -49,15 +49,21 @@ function listarAnimais() { // Implementação da função (10 pontos)
 
 function mostrarNome(e) { // Implementação da função (4 pontos)
   // Implementar...
+
+  if (e.target.tagName === 'IMG') {
+    let nome = e.target.alt;
+    nomeAnimal.innerText = nome;
+  }
 }
 
 function limparNome() {
   p.innerText = "";
+
 }
 
 // Função para limpar as imagens antigas, antes de inserir novas imagens
 function limparDivContainer() {
-  var elemento = document.querySelector("#container");
+  const elemento = document.querySelector("#container");
   while (elemento.firstChild) {
     elemento.removeChild(elemento.firstChild);
   }
