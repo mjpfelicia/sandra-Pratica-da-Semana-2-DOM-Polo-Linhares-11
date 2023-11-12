@@ -1,6 +1,6 @@
-var cachorros = [{ "nome": "Thor", "imagem": "dog1" }, { "nome": "Zeca", "imagem": "dog2" }, { "nome": "Zeus", "imagem": "dog3" }, { "nome": "Pingo", "imagem": "dog4" }];
+const cachorros = [{ "nome": "Thor", "imagem": "dog1" }, { "nome": "Zeca", "imagem": "dog2" }, { "nome": "Zeus", "imagem": "dog3" }, { "nome": "Pingo", "imagem": "dog4" }];
 
-var gatos = [{ "nome": "Dunga", "imagem": "cat1" }, { "nome": "Mika", "imagem": "cat2" }, { "nome": "Conan", "imagem": "cat3" }, { "nome": "Messi", "imagem": "cat4" }];
+const gatos = [{ "nome": "Dunga", "imagem": "cat1" }, { "nome": "Mika", "imagem": "cat2" }, { "nome": "Conan", "imagem": "cat3" }, { "nome": "Messi", "imagem": "cat4" }];
 
 // Selecionar elemento 'select_animais' ( 1 ponto)
 const selectAnimais = document.getElementById('select_animais');
@@ -35,9 +35,9 @@ function listarAnimais() { // Implementação da função (10 pontos)
     animais = gatos;
   }
 
-  animais.forEach(function(animal) {
+  animais.forEach(function (animal) {
     // *  Criar elemento de imagem
-    let img = document.createElement('img');
+    const img = document.createElement('img');
     img.src = 'img/' + animal.imagem + '.jpg';
     img.alt = animal.nome;
 
@@ -51,14 +51,14 @@ function mostrarNome(e) { // Implementação da função (4 pontos)
   // Implementar...
 
   if (e.target.tagName === 'IMG') {
-    let nome = e.target.alt;
+    const nome = e.target.alt;
     nomeAnimal.innerText = nome;
   }
 }
 
 function limparNome() {
+  const p = document.getElementById("nome")
   p.innerText = "";
-
 }
 
 // Função para limpar as imagens antigas, antes de inserir novas imagens
